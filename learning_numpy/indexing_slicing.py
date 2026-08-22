@@ -196,3 +196,29 @@ print(sales[sales[:,1]>=150,3])
 print(sales[[0,3],[0,3]])   # its wrong it just give me (2,)
 print(sales[[0,3]][:,[0,3]])
 
+
+
+marks = np.array([
+    [45, 78, 91, 66],
+    [88, 72, 69, 95],
+    [56, 84, 77, 81],
+    [92, 65, 89, 73],
+    [71, 90, 68, 87]
+])
+# Students 0, 2, 4 → all subjects
+print(marks[[0,2,4]])
+
+# All students → subjects 1 and 3
+print(marks[:,[1,3]])
+
+# Students 1 and 3 → subjects 0 and 2, expected shape (2,2)
+print(marks[[1,3]][:,[0,2]])
+
+# Complete rows where subject 2 >= 80
+print(marks[marks[:,2]>=80])
+
+# Only subject 3 marks where subject 0 >= 70
+print(marks[marks[:,0]>=70,3])
+
+# Complete rows where subject 0 >= 70 AND subject 3 >= 80
+print(marks[(marks[:,0]>= 70) & (marks[:,3]>=80)])

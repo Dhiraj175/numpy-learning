@@ -145,3 +145,32 @@ prediction = X @ w + b
 print(prediction)
 print(prediction.shape)
 
+
+
+
+
+# Practice 6 — Solve equations
+# 3x + 2y = 16
+# x  +  y = 6
+
+A = np.array([
+    [3,2],
+    [1,1]
+])
+B = np.array([16,6])
+solution = np.linalg.solve(A,B)
+print(solution)
+
+
+
+## practice 7 
+# 2x + 3y = 13
+# 4x +  y = 11
+
+C = np.array([
+    [2,3],
+    [4,1]
+])
+D = np.array([13,11])
+soln = np.linalg.solve(C,D)
+print(soln)
